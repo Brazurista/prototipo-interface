@@ -1,0 +1,95 @@
+ 
+   *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+   .container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content:space-between;
+     
+   }
+   .login-google{
+      width: 30vw;
+      height: 100vh;
+   }
+   .container-form{
+      width: 55vw;
+      height: 100vh;
+      background-color: #28a241;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      position: relative;
+    }
+    .form{
+        position: absolute;
+        top: 30vh;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+
+    .form input{
+        margin-top: 20px;
+        height: 23px;
+        width: 250px;
+        background-color: #3d7b31;
+        color: aliceblue;
+        padding-left: 10px;
+        border: 0px solid black;
+        border-radius: 5px;
+    }
+
+    .esqueceu{
+        margin-top: 5px;
+        color: black;
+        font-weight: 680;
+    }
+    .container-btn{
+      display: flex;
+      width: 32vw;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 25px;
+    }
+
+    .container-btn .botao{
+      width: 150px;
+      padding: 0px;
+    }
+    .opcao{
+      display: flex;
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+      font-weight: 600;
+    }
+    .opcao a{
+      color: black;
+    }
+    .login-google{
+      display: flex;
+      justify-content: center;
+    }
+    .brazurista{
+      position: absolute;
+      top: 275px;
+    }
+    .logo{
+      color:#fdd86e ;
+      
+    }
+    .entrar-google img{
+      height: 20px;
+      width: 20px;
+    }
+    .entrar-google {
+      font-size: large;
+      display: flex;
+      height: 30px;
+      align-items: center;
+      margin-top: 20px;
+    }
