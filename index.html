@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/css/index.css"> 
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header_pesquisa" class="header">
+        <div>
+            <h2>LOGO</h2>
+        </div>
+        <nav class="links" id="nav">
+            <button aria-label="Abrir Menu"   id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"> 
+            <span id="hamburger"></span> 
+            </button> 
+           
+            <ul id="menu" role="menu">
+                <li>
+                    <span>  <i  style="color:rgb(255, 238, 0); margin-right: 5px;" class="fa-solid fa-location-dot"></i><label for="link_nav_Ponto"></label><a class="link_nav" >Ponto turístico</a></span>
+                </li>
+                <li>
+                    <span> <i style="color:rgb(255, 238, 0); margin-right: 6px;" class="fa-solid fa-utensils"></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Restaurante</a></span>
+                </li>
+                <li>
+                    <span> <i style="color:rgb(255, 238, 0); margin-right: 6px;" class="fa-regular fa-heart"></i></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Favoritos</a></span>
+                </li>
+                <li>
+                    <div class="input-login">
+                   <a class="link_nav" id="link_nav_login">Faça seu login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-main">
+        <img src="img/logo-sp.jpg" alt="" class="img-top">
+        <section class="container-search">
+                <form action="" class="search-bar">
+                    <input type="text" class="search" placeholder="Digite seu destino aqui">
+                    <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </form>
+        </section>
+        <section>
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/barMooca.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="imagem2.jpg" alt="Slide 2">
+                </div>
+            </div>
+            
+        </section>
+    </main>
+   <script src="js/header.js"></script>
+   <script>
+    const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+    slides[currentSlide].style.opacity = '0';
+    slides[slideIndex].style.opacity = '1';
+    currentSlide = slideIndex;
+}
+
+// Inicializa o slider
+showSlide(0);
+
+// Função para avançar para o próximo slide
+function nextSlide() {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+}
+
+// Adicione um temporizador para trocar automaticamente os slides
+setInterval(nextSlide, 5000); // Troca a cada 5 segundos (ajuste conforme necessário)
+
+   </script>
+</body>
+</html>

@@ -5,15 +5,10 @@
   <title></title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Icone -->
-  <link rel="shortcut icon" href="./assets/images/user-solid.svg" type="image/svg">
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Fim font -->
+  <!-- Icones -->
   <script src="https://kit.fontawesome.com/177f0e37f6.js" crossorigin="anonymous"></script>
-  <link href="./css/style.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="./css/login.css" rel="stylesheet">
   <title>Login</title>
 </head>
 <body>
@@ -24,7 +19,7 @@
           <h2 class="logo"> Brazurista</h2>
           <br>
           <div class="entrar-google">
-            <img src="google-37.png" class="img" alt=""><span>Entre com google</span>
+            <img src="img/google-37.png" class="img" alt=""><span>Entre com google</span>
            </div>
           <div class="entrar-google">
             <i class="fa-solid fa-at"></i><span>Entre com Email</span>
@@ -33,8 +28,10 @@
       </div>
       <div class="container-form">
           <form class="form">
-              <h1 class="titulo">Entre na sua conta</h1>
-              <input class="digitar" type="text" name="user" placeholder="Username" required />
+              <h2 class="titulo">Entre na sua conta</h2>
+              <label for="email">Endereço de email:</label>
+              <input class="digitar" type="email" name="email" placeholder="email" required id="email"/>
+              <label for="email">Senha:</label>
               <input class="digitar" type="password" name="senha" placeholder="Senha" required />
               <a class="esqueceu" href="#">Esqueceu a senha?</a>
                 <div class="container-btn">
