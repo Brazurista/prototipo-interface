@@ -1,0 +1,104 @@
+*{
+
+    margin: 0px;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+  
+  }
+  
+  .opcao{
+    display: flex;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: small;
+  }
+  .opcao a{
+      color: black;
+  }
+
+   .container-form{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-size-adjust: 15px;
+    }
+  
+    .form{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration-style: dotted;
+        text-align: center;
+    }
+  
+    .container-input{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       gap: 15px;
+    }
+  
+   
+  
+    .container-input input{
+        margin-top: 20px;
+        height: 28px;
+        width: 250px;
+        background-color: #7FB239;
+        border: 0px solid black;
+        border-radius: 10px;
+        -webkit-text-fill-color: rgb(255, 255, 255);
+    }
+
+    
+    .botao{
+        margin-top: 20px;
+        height: 28px;
+        width: 250px;
+        background-color:#7FB239;
+        border: 0px solid black;
+        border-radius: 10px;
+        -webkit-text-fill-color: rgb(255, 255, 255);
+    }
+   
+    .container-btn{
+      display: flex;
+      width: 32vw;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  
+    .container-btn .botao{
+      width: 150px;
+      padding: 0px;
+      height: 30px;
+    }
+  
+    .opcao{
+      display: flex;
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+      font-weight: 600;
+  
+    }
+    .container-termo a {
+        text-decoration: none;
+        color: black;
+    }
+     
+  
+      .form .termo {
+        display: none;
+      }
+     
+     .Brazu{
+      color: rgb(248, 248, 48);
+     }

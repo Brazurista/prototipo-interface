@@ -28,7 +28,8 @@
     .form{
         position: absolute;
         display: flex;
-        width: 260px;
+        width: 30vw;
+        font-size: 1.3rem;
         align-items: center;
         flex-direction: column;
     }
@@ -37,8 +38,9 @@
     }
 
     .form input{
-        height: 23px;
-        width: 250px;
+        height: 25px;
+        max-width: 400px;
+        width: 30vw;
         background-color: #7FB239;
         color: aliceblue;
         padding-left: 10px;
@@ -48,7 +50,6 @@
 
     .form input::placeholder{
       color: aliceblue;
-     
     }
     .form label{
      margin-top: 30px;
@@ -59,9 +60,9 @@
     .esqueceu{
         margin-top: 15px;
         margin-left: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         color: black;
-        font-size:small;
+        font-size: 0.8rem;
         align-self: flex-start;
         font-weight: 600;
     }
@@ -89,16 +90,13 @@
       background-color: #D1E8B2;
     }
 
-    .opcao{
-      display: flex;
-      text-align: center;
-      position: relative;
-      flex-direction: column;
-      font-weight: 600;
-      font-size: small;
-    }
-    .opcao a{
-      color: black;
+    
+    .logo{
+      height: 150px;
+      width: 150px;
+      position: absolute;
+      top: -12vh;
+      left: 0vw;
     }
     .login-google{
       display: flex;
@@ -117,7 +115,7 @@
        width: 2px;
        background-color: #7FB239;
        position: absolute;
-       top: -20px;
+       top: -55px;
        left: -40px;
     }
     .logo{
@@ -129,7 +127,7 @@
       width: 20px;
     }
     .entrar-google {
-      font-size: large;
+      font-size: larger;
       display: flex;
       height: 30px;
       align-items: center;
@@ -156,6 +154,6 @@
   }
 
   .entrar-google {
-      font-size: x-small;
+      font-size: medium;
   }
 }

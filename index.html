@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <!-- css -->
     <link rel="stylesheet" href="/css/index.css"> 
     <link rel="stylesheet" href="/css/global.css">
+    <!-- links -->
     <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header_pesquisa" class="header">
         <div>
-            <h2>LOGO</h2>
+            <img src="img/Brazurista.png" class="logo" alt="">
         </div>
         <nav class="links" id="nav">
             <button aria-label="Abrir Menu"   id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"> 
@@ -21,17 +23,17 @@
            
             <ul id="menu" role="menu">
                 <li>
-                    <span>  <i  style="color:rgb(255, 238, 0); margin-right: 5px;" class="fa-solid fa-location-dot"></i><label for="link_nav_Ponto"></label><a class="link_nav" >Ponto turístico</a></span>
+                    <span><label for="link_nav_Ponto"></label><a class="link_nav" >Ponto turístico</a></span>
                 </li>
                 <li>
-                    <span> <i style="color:rgb(255, 238, 0); margin-right: 6px;" class="fa-solid fa-utensils"></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Restaurante</a></span>
+                    <span><label for="link_nav_Ponto"></label><a class="link_nav" >Restaurante</a></span>
                 </li>
                 <li>
-                    <span> <i style="color:rgb(255, 238, 0); margin-right: 6px;" class="fa-regular fa-heart"></i></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Favoritos</a></span>
+                    <span> <i style="color:rgb(255, 23, 23); margin-right: 6px;" class="fa-regular fa-heart"></i></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Favoritos</a></span>
                 </li>
                 <li>
                     <div class="input-login">
-                   <a class="link_nav" id="link_nav_login">Faça seu login</a>
+                   <a class="link_nav" id="link_nav_login" href="login.html">Faça seu login</a>
                     </div>
                 </li>
             </ul>
@@ -45,40 +47,35 @@
                     <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </form>
         </section>
-        <section>
-            <div class="slider">
-                <div class="slide">
-                    <img src="img/barMooca.jpg" alt="Slide 1">
-                </div>
-                <div class="slide">
-                    <img src="imagem2.jpg" alt="Slide 2">
-                </div>
+        <section class="container-slider">
+            <h3>Os melhores destinos para aproveitar com a família!</h3>
+            <div class="btn-left" onclick="direcao(1)">&#60;</div>
+            <div class="content-slide">
+            <div class="block"><img src="img/rio-de-janeiro.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/sao-paulo.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/gramado.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/bahia.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/foz-do-iguacu.jpg.crdownload" class="img-slide" ></div>
+            <div class="block"><img src="img/lencou-maranheses.jpg" class="img-slide" ></div>
+
             </div>
-            
+            <div class="btn-right" onclick="direcao(2)">&#62;</div>
         </section>
     </main>
    <script src="js/header.js"></script>
    <script>
-    const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+        function direcao(e){
+            let direcao = document.querySelector(".content-slide");
 
-function showSlide(slideIndex) {
-    slides[currentSlide].style.opacity = '0';
-    slides[slideIndex].style.opacity = '1';
-    currentSlide = slideIndex;
-}
+            if(e === 1){
+                direcao.scrollLeft = direcao.scrollLeft - 500
 
-// Inicializa o slider
-showSlide(0);
+            }
 
-// Função para avançar para o próximo slide
-function nextSlide() {
-    const nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
-}
-
-// Adicione um temporizador para trocar automaticamente os slides
-setInterval(nextSlide, 5000); // Troca a cada 5 segundos (ajuste conforme necessário)
+            else if( e == 2){
+                direcao.scrollLeft = direcao.scrollLeft + 500
+            }
+        }
 
    </script>
 </body>
