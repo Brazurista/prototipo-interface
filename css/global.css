@@ -9,7 +9,7 @@ body{
 
 .header{
     height: 10vh;
-    background-color:#99e42e;
+    background-color: #7FB239;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -17,6 +17,7 @@ body{
     padding-right: 15px;
     font-size: larger;
     font-weight: bold;
+    position: relative;
    
 }
 
@@ -25,18 +26,22 @@ body{
     justify-content: space-between;
     list-style: none;
 }
-.header ul li{
-    margin-left: 15px;
-    margin-right: 5;
-    margin-top: 0px;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
+
+.header ul li:not(:last-child) a {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
+
 .input-login{
-    width: 160px;
+    width: 140px;
     height: 4.5vh;
-    background-color: #7FB239;
+    background-color: #638B2C;
+    border: 1.5px solid #527521;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +52,7 @@ body{
   color: rgb(24, 23, 23);
   cursor: pointer;
   text-decoration: none;
+  margin-left: 0px;
 }
 .input-login:hover{
     background-color:#7FB239;
@@ -54,6 +60,7 @@ body{
 .logo{
   height: 150px;
   width: 150px;
+  margin-left: 50px;
 }
 /* menu mobile */
 #btn-mobile {
@@ -66,11 +73,36 @@ body{
     text-align: center;
     position: relative;
     flex-direction: column;
-    font-weight: 600;
-    font-size: small;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+}
+.opcao::after{
+  position: absolute;
+  top: 5vh;
+  left: -11vw;
+  content: "";
+  width: 10vw;
+  height: 1.8px;
+  background-color: black
+ 
+}
+.opcao::before{
+  position: absolute;
+  top: 5vh;
+  right: -11vw;
+  content: "";
+  width: 10vw;
+  height: 1.8px;
+  background-color: black
+ 
 }
 .opcao a{
     color: black;
+    text-decoration: none;
+}
+.opcao a:hover{
+  text-decoration: underline;
 }
 @media (max-width: 768px){
     /* menu responsivo */
@@ -79,8 +111,9 @@ body{
         position: absolute;
         width: 0;
         top: 0px;
+        padding-left: 40px;
         right: 0px;
-        background-color: #99e42e;
+        background-color: #7FB239;
         transition: 0.6s;
         z-index: 10;
         height: 100vh;

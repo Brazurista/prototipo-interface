@@ -90,11 +90,13 @@
   
     }
     .container-termo a {
-        text-decoration: none;
+
         color: black;
     }
      
-  
+    .termo-link{
+      text-decoration: underline;
+    }
       .form .termo {
         display: none;
       }

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pequisa sao paulo</title>
+    <!-- API -->
     <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
     <link href="css/pesquisa.css" type="text/css" rel="stylesheet">
     <link href="css/global.css" type="text/css" rel="stylesheet">
     <link href="js/header.js" type="text/js">
@@ -13,7 +15,9 @@
 <body>
     <header id="header_pesquisa" class="header">
         <div>
+        <a href="index.html">
             <img src="img/Brazurista.png" class="logo" alt="">
+        </a>
         </div>
         <nav class="links" id="nav">
             <button aria-label="Abrir Menu"   id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"> 
@@ -28,11 +32,11 @@
                     <span><label for="link_nav_Ponto"></label><a class="link_nav" >Restaurante</a></span>
                 </li>
                 <li>
-                    <span> <i style="color:rgb(255, 23, 23); margin-right: 6px;" class="fa-regular fa-heart"></i></i></i><label for="link_nav_Ponto"></label><a class="link_nav" >Favoritos</a></span>
+                    <span><label for="link_nav_Ponto"></label><a class="link_nav" href="login.html" >Faça seu login</a></span>
                 </li>
                 <li>
                     <div class="input-login">
-                   <a class="link_nav" id="link_nav_login" href="login.html">Faça seu login</a>
+                   <a class="link_nav" id="link_nav_login" href="cadastro.html">Cadastre-se</a>
                     </div>
                 </li>
             </ul>
@@ -46,7 +50,7 @@
                 <input type="submit" class="input-buscar" value="BUSCAR">
             </form>
             <div class="resultadoPesquisa">
-            <span>Resultados da busca por<span class="text-amarelo">  "SÃO PAULO" </span></span>
+            <span>Resultados da busca por " <span class="text-amarelo" id="resultadoPesquisa">  "SÃO PAULO" </span> "</span>
             </div>
             <div class="resultadoturistico">
                 <div class="ponto-turistico">
@@ -177,5 +181,14 @@
     <footer>
     </footer>
     <script src="js/header.js"></script>
+    
+    <script>
+     
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const pesquisa = urlParams.get('pesquisa');
+
+        document.getElementById('resultadoPesquisa').textContent = pesquisa.toUpperCase();
+    </script>
 </body>
 </html>
